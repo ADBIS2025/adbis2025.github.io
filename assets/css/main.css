@@ -4105,6 +4105,39 @@ body.is-touch #banner {
 
 	}
 
+/* Colore nero per le voci del menu nella homepage */
+.homepage #nav ul li a {
+    color: black !important;
+}
+
+/* Colore bianco per le voci del menu nelle altre pagine */
+body:not(.homepage) #nav ul li a {
+    color: white !important;
+}
+
+.left-title {
+    text-align: left; /* Allinea il testo a sinistra */
+    font-size: 2em; /* Dimensione del titolo */
+    margin-bottom: 1em; /* Spazio sotto il titolo */
+}
+
+.section-title {
+    font-size: 2em; /* Dimensione del titolo */
+    font-weight: bold;
+    text-align: center; /* Mantiene il testo centrato per i titoli delle sezioni */
+    margin-bottom: 1em;
+}
+
+img {
+    max-width: 200px; /* Dimensione dell'immagine */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+
 
 
 
