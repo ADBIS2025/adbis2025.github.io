@@ -4151,7 +4151,7 @@ img {
 
 /* General styling for sponsor images */
 .sponsorimg {
-    margin: 0 10px; /* Horizontal space between images */
+    /*margin: 0 10px; /* Horizontal space between images */
     display: flex;
     justify-content: center;
 }
