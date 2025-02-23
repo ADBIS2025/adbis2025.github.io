@@ -3445,6 +3445,13 @@ input, select, textarea {
 						display: none;
 					}
 
+					#header nav {
+						position: absolute;
+						right: 1em;
+						top: 0;
+						margin-left: 7em; /* Aumenta il margine a destra */
+					}
+
 	body.landing #page-wrapper {
 		padding-top: 0;
 	}
