@@ -3378,7 +3378,7 @@ input, select, textarea {
 		padding-top: 3.5em;
 	}
 
-	#header {
+	/*#header {
 		background: rgba(39, 40, 51, 0.965);
 		box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.25);
 		cursor: default;
@@ -3389,7 +3389,26 @@ input, select, textarea {
 		top: 0;
 		width: 100%;
 		z-index: 100;
+	}*/
+
+	#header {
+		background: rgba(39, 40, 51, 0.965);
+		box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.25);
+		cursor: default;
+		min-height: 3.5em; /* Altezza minima, ma espandibile */
+		left: 0;
+		padding: 0.5em 1em; /* Spazio interno che rende il layout più flessibile */
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 100;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap; /* Permette agli elementi di andare a capo */
+		box-sizing: border-box;
 	}
+
+	
 
 		#header h1 {
 			height: inherit;
