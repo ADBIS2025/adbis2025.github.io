@@ -75,6 +75,44 @@
               margin: 0 auto;
             }
 
+            .btn-bio, .btn-abstract {
+                border: none;
+                border-radius: 6px;
+                padding: 8px 16px;
+                margin: 6px 4px;
+                font-size: 0.9em;
+                cursor: pointer;
+                text-decoration: none;
+                display: inline-block;
+                transition: background-color 0.3s ease;
+                white-space: nowrap;
+              }
+            
+              .btn-bio {
+                background-color: #e04b63;
+                color: #fff;
+              }
+            
+              .btn-bio:hover {
+                background-color: #c0394b;
+              }
+            
+              .btn-abstract {
+                background-color: #e04b63;
+                color: #fff;
+              }
+            
+              .btn-abstract:hover {
+                background-color: #c0394b;
+              }
+            
+              @media (max-width: 480px) {
+                .btn-bio, .btn-abstract {
+                  font-size: 0.85em;
+                  padding: 6px 12px;
+                }
+              }
+
         </style>
 </head>
 <body class="is-preload">
@@ -425,8 +463,8 @@
         <h3><strong>Felix Naumann</strong></h3>
         <p><em>University of Potsdam</em></p>
         <p>Data Quality in the Age of AI</p>
-        <a onclick="openModal('bio-Naumann')" class="button primary small" style="margin-bottom: 10px; cursor: pointer;">Bio</a><br>
-        <a onclick="openModal('abstract-Naumann')" class="button primary" style="cursor: pointer;">Abstract</a>
+        <a onclick="openModal('bio-Naumann')" class="btn-bio" style="margin-bottom: 10px; cursor: pointer;">Bio</a><br>
+        <a onclick="openModal('abstract-Naumann')" class="btn-abstract" style="cursor: pointer;">Abstract</a>
       </div>
     </div>
 
@@ -438,8 +476,8 @@
         <h3><strong>Evaggelia Pitoura</strong></h3>
         <p><em>University of Ioannina</em></p>
         <p>Diversity-Aware, Fair and Unbiased Data Management</p>
-        <a onclick="openModal('bio-Pitoura')" class="button primary small" style="margin-bottom: 10px; cursor: pointer;">Bio</a><br>
-        <a onclick="openModal('abstract-Pitoura')" class="button primary" style="cursor: pointer;">Abstract</a>
+        <a onclick="openModal('bio-Pitoura')" class="btn-bio" style="margin-bottom: 10px; cursor: pointer;">Bio</a><br>
+        <a onclick="openModal('abstract-Pitoura')" class="btn-abstract" style="cursor: pointer;">Abstract</a>
       </div>
     </div>
 
@@ -451,8 +489,8 @@
         <h3><strong>Eero Hyvönen</strong></h3>
         <p><em>Aalto University</em></p>
         <p>Digital Humanities on the Semantic Web: from Infrastructure to Practical Applications, AI-based Knowledge Discovery, and Web of Wisdom<p>
-        <a onclick="openModal('bio-Hyvönen')" class="button primary small" style="margin-bottom: 10px; cursor: pointer;">Bio</a><br>
-        <a onclick="openModal('abstract-Hyvönen')" class="button primary" style="cursor: pointer;">Abstract</a>
+        <a onclick="openModal('bio-Hyvönen')" class="btn-bio" style="margin-bottom: 10px; cursor: pointer;">Bio</a><br>
+        <a onclick="openModal('abstract-Hyvönen')" class="btn-abstract" style="cursor: pointer;">Abstract</a>
       </div>
     </div>
 
@@ -464,8 +502,8 @@
         <h3><strong>Yannis Ioannidis</strong></h3>
         <p><em>National and Kapodistrian University of Athens</em></p>
         <p>Interactive Digital Storytelling</p>
-        <a onclick="openModal('bio-Ioannidis')" class="button primary small" style="margin-bottom: 10px; cursor: pointer;">Bio</a><br>
-        <a onclick="openModal('abstract-Ioannidis')" class="button primary" style="cursor: pointer;">Abstract</a>
+        <a onclick="openModal('bio-Ioannidis')" class="btn-bio" style="margin-bottom: 10px; cursor: pointer;">Bio</a><br>
+        <a onclick="openModal('abstract-Ioannidis')" class="btn-abstract" style="cursor: pointer;">Abstract</a>
       </div>
     </div>
 
