@@ -6,6 +6,76 @@
     <title>Thematic School</title>
     <link rel="stylesheet" href="../assets/css/main.css">
     <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+        .modal {
+          display: none;
+          position: fixed;
+          z-index: 1000;
+          padding-top: 100px;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          overflow: auto;
+          background-color: rgba(0,0,0,0.6);
+        }
+        
+        .modal-content {
+          background-color: #fefefe;
+          color: #000;
+          margin: auto;
+          padding: 20px;
+          border-radius: 10px;
+          width: 80%;
+          max-width: 650px;
+          position: relative;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        /* 👉 fix per i titoli */
+        .modal-content h3 {
+          color: #111;
+        }
+        
+        .close {
+          color: #aaa;
+          position: absolute;
+          top: 10px;
+          right: 20px;
+          font-size: 28px;
+          font-weight: bold;
+          cursor: pointer;
+        }
+        
+        .close:hover {
+          color: #000;
+        }
+
+        
+            .swiper-slide {
+              display: flex;
+              justify-content: center;
+            }
+          
+            .speaker-card {
+              width: 280px;
+              text-align: center;
+              background: rgba(39, 40, 51, 0.965);
+              color: #fff;
+              border-radius: 10px;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+              padding: 20px;
+              margin: 0 auto;
+            }
+          
+            .swiper {
+              padding: 40px 0;
+              max-width: 1200px;
+              margin: 0 auto;
+            }
+
+        </style>
 </head>
 <body class="is-preload">
     <div id="page-wrapper">
@@ -343,6 +413,157 @@
     </tbody>
 </table>
 
+<h4 style="text-align: center; margin-top: 60px;">Our Speakers</h4>
+<div class="swiper speaker-slider">
+  <div class="swiper-wrapper">
+
+    <!-- Speaker 1 -->
+    <div class="swiper-slide">
+      <div class="speaker-card">
+        <img src="../images/keynotes/felix.jpg" alt="Felix Naumann" style="width: 200px; height: 200px; object-fit: cover; border-radius: 8px;" />
+        <br>
+        <h3><strong>Felix Naumann</strong></h3>
+        <p><em>University of Potsdam</em></p>
+        <p>Data Quality in the Age of AI</p>
+        <a onclick="openModal('bio-Naumann')" class="button primary small" style="margin-bottom: 10px; cursor: pointer;">Bio</a><br>
+        <a onclick="openModal('abstract-Naumann')" class="button primary" style="cursor: pointer;">Abstract</a>
+      </div>
+    </div>
+
+    <!-- Speaker 2 -->
+    <div class="swiper-slide">
+      <div class="speaker-card">
+        <img src="../images/keynotes/pitoura.jpg" alt="Evaggelia Pitoura" style="width: 200px; height: 200px; object-fit: cover; border-radius: 8px;" />
+        <br>
+        <h3><strong>Evaggelia Pitoura</strong></h3>
+        <p><em>University of Ioannina</em></p>
+        <p>Diversity-Aware, Fair and Unbiased Data Management</p>
+        <a onclick="openModal('bio-Pitoura')" class="button primary small" style="margin-bottom: 10px; cursor: pointer;">Bio</a><br>
+        <a onclick="openModal('abstract-Pitoura')" class="button primary" style="cursor: pointer;">Abstract</a>
+      </div>
+    </div>
+
+    <!-- Speaker 3 -->
+    <div class="swiper-slide">
+      <div class="speaker-card">
+        <img src="../images/keynotes/hyvonen.png" alt="Eero Hyvönen" style="width: 200px; height: 200px; object-fit: cover; border-radius: 8px;" />
+        <br>
+        <h3><strong>Eero Hyvönen</strong></h3>
+        <p><em>Aalto University</em></p>
+        <p>Digital Humanities on the Semantic Web: from Infrastructure to Practical Applications, AI-based Knowledge Discovery, and Web of Wisdom<p>
+        <a onclick="openModal('bio-Hyvönen')" class="button primary small" style="margin-bottom: 10px; cursor: pointer;">Bio</a><br>
+        <a onclick="openModal('abstract-Hyvönen')" class="button primary" style="cursor: pointer;">Abstract</a>
+      </div>
+    </div>
+
+    <!-- Speaker 4 -->
+    <div class="swiper-slide">
+      <div class="speaker-card">
+        <img src="../images/keynotes/yannis.jpg" alt="Yannis Ioannidis" style="width: 200px; height: 200px; object-fit: cover; border-radius: 8px;" />
+        <br>
+        <h3><strong>Yannis Ioannidis</strong></h3>
+        <p><em>National and Kapodistrian University of Athens</em></p>
+        <p>Interactive Digital Storytelling</p>
+        <a onclick="openModal('bio-Ioannidis')" class="button primary small" style="margin-bottom: 10px; cursor: pointer;">Bio</a><br>
+        <a onclick="openModal('abstract-Ioannidis')" class="button primary" style="cursor: pointer;">Abstract</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Navigation buttons -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
+
+
+</div> 
+  
+
+<!-- ====================== MODALS ====================== -->
+
+<!-- Sp1 -->
+  <div id="bio-Naumann" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('bio-Naumann')">&times;</span>
+      <h3>Felix Naumann</h3>
+      <p>Felix Naumann studied mathematics, economy, and computer sciences at the University of Technology in Berlin and completed his PhD thesis in the area of data quality at Humboldt University of Berlin in 2000. After a PostDoc position at the IBM Almaden Research Center working on data integration topics, he came assistant professor for information integration, again at the Humboldt-University of Berlin in 2003. Since 2006 he holds the chair for Information Systems at the Hasso Plattner Institute (HPI) at the University of Potsdam in Germany. He has been visiting researcher at QCRI, AT&T Research, IBM Research, and SAP. His research interests include data profiling, data quality and cleansing, and data integration, recorded in over 200 scientific publications. Next to numerous PC memberships for international conferences, he has organized several conferences in various roles, including VLDB 2021 as PC co-chair, and he is the Editor-in-Chief of the ACM Journal of Data and Information Quality (JDIQ). More details are at <a href="https://hpi.de/naumann/people/felix-naumann.html" target="_blank" rel="noreferrer noopener">https://hpi.de/naumann/people/felix-naumann.html.</a></p>
+    </div>
+  </div>
+  
+  <div id="abstract-Naumann" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('abstract-Naumann')">&times;</span>
+      <h3>Data Quality in the Age of AI</h3>
+      <p>TBD</p>
+    </div>
+  </div>
+  
+  <!-- Sp2 -->
+  <div id="bio-Pitoura" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('bio-Pitoura')">&times;</span>
+      <h3>Evaggelia Pitoura</h3>
+      <p>Evaggelia Pitoura is a Professor at the Department of Computer Science and Engineering at the University of Ioannina and a Lead Researcher at Archimedes Research Unit of Athena RC, Greece. She holds a BEng degree from the University of Patras, Greece, and an MS and PhD from Purdue University, USA. Her current research interests focus on two primary areas: responsible data management, with a focus on fairness, explainability, and their interplay; and on graph exploration and analysis. For her work, he has received best paper awards, a Marie Currie Fellowship and two Recognition of Service Awards from ACM. She is an ACM senior member, chair of the Greek ACM-W event steering committee, chair of the Hellenic ACM SIGMOD chapter, and member of the sectorial scientific council of Greece National Council for Research, Technology and Innovation.</p>
+    </div>
+  </div>
+  
+  <div id="abstract-Pitoura" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('abstract-Pitoura')">&times;</span>
+      <h3>Diversity-Aware, Fair and Unbiased Data Management</h3>
+      <p>TBD</p>
+    </div>
+  </div>
+  
+  <!-- Sp3 -->
+  <div id="bio-Hyvönen" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('bio-Hyvönen')">&times;</span>
+      <h3>Eero Hyvönen</h3>
+      <p>Eero Hyvönen is professor of semantic media technology at the Aalto University, Department of Computer Science, and director of Helsinki Centre for Digital Humanities (HELDIG) at the University of Helsinki. His research has focused since 2001 on Semantic Web and Linked (Open) Data technologies, developing with his Semantic Computing Research Group (SeCo) <a href="https://seco.cs.aalto.fi/" target="_blank" rel="noreferrer noopener">(https://seco.cs.aalto.fi/)</a> the national semantic web infrastructure in Finland <a href="https://seco.cs.aalto.fi/projects/lodi4dh/" target="_blank" rel="noreferrer noopener">(https://seco.cs.aalto.fi/projects/lodi4dh/)</a> and its applications in different areas, especially in Cultural Heritage and for Digital Humanities research <a href="https://seco.cs.aalto.fi/applications/sampo/" target="_blank" rel="noreferrer noopener">(https://seco.cs.aalto.fi/applications/sampo/)</a>. Eero Hyvönen has published nearly 600 articles and books and got nearly 30 international and national honorary prizes and acknowledgements.
+        <br>
+        <b>Eero Hyvönen</b>
+            <br />
+            [1] Eero Hyvönen: Using the Semantic Web in Digital Humanities: Shift from Data Publishing to Data-analysis and Serendipitous Knowledge Discovery. Semantic Web, vol. 11, no. 1, pp. 187-193, 2020.
+            <br />
+            [2] Eero Hyvönen: How to Create a National Cross-domain Ontology and Linked Data Infrastructure and Use It on the Semantic Web. Semantic Web, vol. 15, no. 4, pp. 1499-1513, 2024.
+            <br />
+            [3] Eero Hyvönen: Digital Humanities on the Semantic Web: Sampo Model and Portal Series. Semantic Web, vol. 14, no. 4, pp. 729-744, 2023.
+            <br />
+            [4] Eero Hyvönen: Serendipitous knowledge discovery on the Web of Wisdom based on searching and explaining interesting relations in knowledge graphs. Journal of Web Semantics, Elsevier, 2025.
+
+        </p>
+    </div>
+  </div>
+  
+  <div id="abstract-Hyvönen" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('abstract-Hyvönen')">&times;</span>
+      <h3>Digital Humanities on the Semantic Web: from Infrastructure to Practical Applications, AI-based Knowledge Discovery, and Web of Wisdom</h3>
+      <p>TBD</p>
+    </div>
+  </div>
+  
+  <!-- Sp4 -->
+  <div id="bio-Ioannidis" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('bio-Ioannidis')">&times;</span>
+      <h3>Yannis Ioannidis</h3>
+      <p>Yannis Ioannidis (Ph.D., Computer Sciences, UC Berkeley; MSc, Applied Mathematics, Harvard University; Diploma, Electrical Engineering, National Technical University of Athens) is the President of the Association of Computing Machinery (ACM). He is a Professor at the Department of Informatics and Telecom of the University of Athens as well as an Associated Faculty at the “Athena” Research and Innovation Center, where he also served as the President and General Director for 10 years. His research interests include Database and Information Systems, Data Science, Data Infrastructures and Digital Repositories, Recommender Systems and Personalization, and Interactive Digital Storytelling, topics on which he has published over 180 articles in leading journals and conferences and holds four patents. His work is often inspired by and applied to data management and analysis problems that arise in industrial environments or in the context of other scientific fields (Social Sciences and Humanities, Life Sciences, Physical Sciences) and the Arts. He is an ACM and IEEE Fellow, a member of Academia Europaea, and a recipient of several research, teaching, and service awards. He is a co-founder of OpenAIRE, the international data infrastructure for Open Science in Europe, as well as of several AI/data-driven start-ups. He is also a co-chair of the Global Climate Hub of the UN Sustainable Development Solutions Network.</p>
+    </div>
+  </div>
+
+  <div id="abstract-Ioannidis" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('abstract-Ioannidis')">&times;</span>
+      <h3>Interactive Digital Storytelling</h3>
+      <p>TBD</p>
+    </div>
+  </div>
+
+</div>
+
 <!--
 <h1>DC Co-Chairs</h1>
 <ul>
@@ -366,8 +587,7 @@
 -->
 
 
-            </div>
-        </div> 
+
         
 
         <!-- Footer -->
@@ -415,5 +635,39 @@
     <script src="../assets/js/breakpoints.min.js"></script>
     <script src="../assets/js/util.js"></script>
     <script src="../assets/js/main.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> 
+    <script>
+        function openModal(id) {
+          document.getElementById(id).style.display = "block";
+        }
+        
+        function closeModal(id) {
+          document.getElementById(id).style.display = "none";
+        }
+        
+        window.onclick = function(event) {
+          const modals = document.querySelectorAll('.modal');
+          modals.forEach(modal => {
+            if (event.target === modal) {
+              modal.style.display = "none";
+            }
+          });
+        }
+        </script>
+        <script>
+            var swiper = new Swiper('.speaker-slider', {
+              slidesPerView: 4,
+              spaceBetween: 30,
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+              },
+              breakpoints: {
+                1200: { slidesPerView: 4 },
+                900: { slidesPerView: 2 },
+                0: { slidesPerView: 1 }
+              }
+            });
+          </script>
 </body>
 </html>
