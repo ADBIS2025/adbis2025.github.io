@@ -4202,31 +4202,38 @@ img {
   scroll-margin-top: 80px;
 }
 
-@media screen and (max-width: 736px) {
-  ul.dropotron {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    white-space: normal !important;
-    word-break: break-word !important;
-    overflow-wrap: break-word !important;
-    padding: 0 !important;
-  }
+/* Media query per schermi più piccoli, es. tablet e smartphone */
+@media screen and (max-width: 980px) {
+    /* Stili per le voci del sottomenu (probabilmente rappresentate da .link o un selettore simile all'interno di #navPanel) */
+    #navPanel .link {
+        /* Rimuoviamo l'altezza fissa */
+        height: auto;
+        /* Rimuoviamo l'altezza della riga fissa e la rendiamo relativa al font-size */
+        line-height: 1.5em; /* Un valore di 1.5 o 1.6em di solito funziona bene per testi su più righe */
+        /* Permettiamo al testo di andare a capo */
+        white-space: normal;
+        /* Aumentiamo il padding verticale per dare più spazio tra le voci */
+        padding: 0.5em 1em; /* Potresti dover aggiustare questi valori */
+    }
 
-  ul.dropotron li {
-    display: block !important;
-  }
-
-  ul.dropotron li a {
-    display: block !important;
-    white-space: normal !important;
-    word-break: break-word !important;
-    overflow-wrap: break-word !important;
-    font-size: 0.95em !important;
-    line-height: 1.5em !important;
-    padding: 0.75em 1em !important;
-  }
+    /* Potresti dover applicare stili simili anche ai link diretti del sottomenu, se #navPanel .link non li copre tutti */
+    #nav ul.submenu ul li a {
+        height: auto;
+        line-height: 1.5em;
+        white-space: normal;
+        padding: 0.5em 1em;
+    }
 }
+
+/* Per schermi ancora più piccoli (es. smartphone) */
+@media screen and (max-width: 736px) {
+    #navPanel .link,
+    #nav ul.submenu ul li a {
+        font-size: 0.9em; /* Riduci leggermente la dimensione del font se il testo è ancora troppo compresso */
+        padding: 0.4em 0.8em; /* Riduci ulteriormente il padding se necessario */
+    }
+}
+
 
 
 
