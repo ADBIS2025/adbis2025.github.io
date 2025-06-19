@@ -4198,7 +4198,35 @@ img {
     }
 }
 
+[id] {
+  scroll-margin-top: 80px;
+}
 
+@media screen and (max-width: 736px) {
+  ul.dropotron {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    padding: 0 !important;
+  }
+
+  ul.dropotron li {
+    display: block !important;
+  }
+
+  ul.dropotron li a {
+    display: block !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    font-size: 0.95em !important;
+    line-height: 1.5em !important;
+    padding: 0.75em 1em !important;
+  }
+}
 
 
 
